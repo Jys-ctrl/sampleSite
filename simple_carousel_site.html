@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Image Carousel Website</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background-color: #3b6ec6;
+      color: white;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #3b6ec6;
+      margin-top: 50px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #3b6ec6;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    /* Swiper carousel */
+    .swiper {
+      width: 80%;
+      height: 300px;
+      margin: 30px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #3b6ec6;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #3b6ec6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BANNER IMAGE</h1>
+  </header>
+
+  <section>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+    </p>
+
+    <h2>ALBUM 1</h2>
+    <div class="swiper mySwiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://placehold.co/800x300" alt="Slide 1" /></div>
+        <div class="swiper-slide"><img src="https://placehold.co/800x300" alt="Slide 2" /></div>
+        <div class="swiper-slide"><img src="https://placehold.co/800x300" alt="Slide 3" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <h2>ALBUM 2</h2>
+    <div class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://placehold.co/800x300/87CEFA/fff" alt="Slide 1" /></div>
+        <div class="swiper-slide"><img src="https://placehold.co/800x300/6495ED/fff" alt="Slide 2" /></div>
+        <div class="swiper-slide"><img src="https://placehold.co/800x300/4169E1/fff" alt="Slide 3" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </section>
+
+  <footer>
+    <p>FOOTER FOR CONTACTS &amp; SOCMED</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper1 = new Swiper('.mySwiper1', {
+      loop: true,
+      pagination: { el: '.mySwiper1 .swiper-pagination', clickable: true },
+      navigation: {
+        nextEl: '.mySwiper1 .swiper-button-next',
+        prevEl: '.mySwiper1 .swiper-button-prev'
+      }
+    });
+
+    const swiper2 = new Swiper('.mySwiper2', {
+      loop: true,
+      pagination: { el: '.mySwiper2 .swiper-pagination', clickable: true },
+      navigation: {
+        nextEl: '.mySwiper2 .swiper-button-next',
+        prevEl: '.mySwiper2 .swiper-button-prev'
+      }
+    });
+  </script>
+</body>
+</html>
